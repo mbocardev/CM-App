@@ -47,5 +47,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+require base_path('modules/Product/routes.php');
+require base_path('modules/Transactions/routes.php');
 
 require __DIR__.'/auth.php';
